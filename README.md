@@ -28,10 +28,13 @@ python pretraining/main.py --config configs/pretrain.yaml --train --sample_at_st
 ### Feature Extraction
 In this step, we extract the Camelyon16 features using the pre-trained mddp model. Firstly, you need to extract patches following the [CLAM](https://github.com/mahmoodlab/CLAM). 
 ```
-python clam/create_patches_fp.py --source DATA_DIRECTORY --save_dir RESULTS_DIRECTORY --patch_size 256 --seg --patch --stitch 
+python clam_cls/create_patches_fp.py --source DATA_DIRECTORY --save_dir RESULTS_DIRECTORY --patch_size 256 --seg --patch --stitch 
 ```
 Then, modify the 'csv_path', 'data_h5_dir', 'data_slide_dir', 'feat_dir' to your local directories in 'feature_extraction/runners/DiffusionBasedModelRunners/BBDMRunner.py'. The features are extracted using command:
 ```
-python main.py --config configs/Template-LBBDM-f8-CRC.yaml --sample_to_eval --gpu_ids 0 --resume_model MDDP_pretrained/pretrained_weights.pth
+python main.py --config configs/pretrained.yaml --sample_to_eval --gpu_ids 0 --resume_model MDDP_pretrained/pretrained_weights.pth
 ```
+
+### WSI classification
+
 
