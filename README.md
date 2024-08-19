@@ -39,3 +39,20 @@ python main.py --config configs/pretrained.yaml --sample_to_eval --gpu_ids 0 --r
 ```
 python main.py --drop_out --early_stopping --lr 2e-4 --k 10 --label_frac 1.0 --exp_code task_1_tumor_vs_normal_CLAM_100 --weighted_sample --bag_loss ce --inst_loss svm --task task_1_tumor_vs_normal --model_type clam_sb --log_data --data_root_dir CLAM_features/ --data_MDDP_dir mddp_features/ --results_dir logs/
 ```
+### Evaluation
+```
+python eval.py --drop_out --fold 1 --splits_dir camelyon16/ --models_exp_code task_1_tumor_vs_normal_CLAM_100_s1 --save_exp_code task_1_tumor_vs_normal_CLAM_100_s1_cv --task task_1_tumor_vs_normal --model_type clam_sb --results_dir logs/ --data_root_dir CLAM_features/ --data_BBDM_dir mddp_features/
+```
+
+## Citation
+
+If any part of this code is used, please give appropriate citations to our paper. <br />
+
+BibTex entry: <br />
+```
+@inproceedings{lou2024multi,
+  title={Multi-modal Denoising Diffusion Pretraining for Whole-Slide Image Classification},
+  author={Lou, Wei and Li, Guanbin and Wan, Xiang and Li, Haofeng},
+  booktitle={ACM Multimedia 2024}
+}
+```
