@@ -36,5 +36,6 @@ python main.py --config configs/pretrained.yaml --sample_to_eval --gpu_ids 0 --r
 ```
 
 ### WSI classification
-
-
+```
+python main.py --drop_out --early_stopping --lr 2e-4 --k 10 --label_frac 1.0 --exp_code task_1_tumor_vs_normal_CLAM_100 --weighted_sample --bag_loss ce --inst_loss svm --task task_1_tumor_vs_normal --model_type clam_sb --log_data --data_root_dir CLAM_features/ --data_MDDP_dir mddp_features/ --results_dir logs/
+```
