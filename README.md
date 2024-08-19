@@ -23,7 +23,7 @@ python HE_IHC_select.py
 ```
 python pretraining/main.py --config configs/pretrain.yaml --train --sample_at_start --save_top --gpu_ids 0
 ```
-
+The pre-trained weights can be downloaded in Baiduyun Link：https://pan.baidu.com/s/18Vxkcu9Jk_6WM2ocjpA2Kg?pwd=kued
 ## WSI classification
 ### Feature Extraction
 In this step, we extract the Camelyon16 features using the pre-trained mddp model. Firstly, you need to extract patches following the [CLAM](https://github.com/mahmoodlab/CLAM). 
